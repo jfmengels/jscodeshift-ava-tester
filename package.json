@@ -1,0 +1,36 @@
+{
+  "name": "jscodeshift-ava-tester",
+  "version": "0.0.0",
+  "description": "jscodeshift wrapper to write smaller and better tests for your codemods",
+  "license": "MIT",
+  "repository": "jfmengels/jscodeshift-ava-tester",
+  "author": {
+    "name": "Jeroen Engels",
+    "email": "jfm.engels@gmail.com",
+    "url": "github.com/jfmengels"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "jscodeshift",
+    "ava",
+    "wrapper",
+    "test",
+    "tester"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "space": 2
+  }
+}
