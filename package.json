@@ -1,7 +1,7 @@
 {
   "name": "jscodeshift-ava-tester",
   "version": "0.0.0",
-  "description": "jscodeshift wrapper to write smaller and better tests for your codemods",
+  "description": "jscodeshift wrapper to write smaller and better tests for your codemods using AVA",
   "license": "MIT",
   "repository": "jfmengels/jscodeshift-ava-tester",
   "author": {
