@@ -64,9 +64,13 @@ The codemod to test.
 
 An object containing two methods: `testChanged` and `testUnchanged`.
 
-### testChanged(input, expectedOutput)
+### testChanged([title], input, expectedOutput)
 
 Create a test that ensures that the codemod modifies `input` to `expectedOutput`.
+
+#### title
+
+Optional title for the test. If omitted, `input` will be used as the title.
 
 #### input
 
@@ -76,9 +80,13 @@ Mock content of an input file.
 
 Expected result of the codemod when given `input`.
 
-### testUnchanged(input)
+### testUnchanged([title], input)
 
 Create a test that ensures that the codemod does not modify `input`.
+
+#### title
+
+Optional title for the test. If omitted, `input` will be used as the title.
 
 #### input
 
@@ -86,7 +94,7 @@ Mock content of an input file.
 
 ## Thanks
 
-Special thanks to @jamestalmage who created the original script.
+Special thanks to [@jamestalmage](https://github.com/jamestalmage) who created the original script.
 
 ## License
 

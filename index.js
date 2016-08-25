@@ -23,14 +23,23 @@ function testPlugin(jscodeshift, test, plugin) {
     return plugin(fileInfo(path, source), mockApi);
   }
 
-  const createTest = function (input, expected) {
-    test(input, function (t) {
+  const createTest = function (title, input, expected) {
+    // If there is no title, use input as title
+    if (title && input && !expected) {
+      expected = input;
+    }
+    test(title, function (t) {
       t.is(runPlugin(plugin, input), expected);
     });
   };
   return {
     testChanged: createTest,
-    testUnchanged: input => createTest(input, input)
+    testUnchanged: (title, input) => {
+      if (title && !input) {
+        input = title;
+      }
+      return createTest(title, input, input);
+    }
   };
 }
 
