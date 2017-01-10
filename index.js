@@ -26,8 +26,8 @@ function testPlugin(jscodeshift, test, plugin) {
   const createTest = function (title, input, expected) {
     // If there is no title, use input as title
     if (title && input && !expected) {
-      input = title;
       expected = input;
+      input = title;
     }
     test(title, function (t) {
       t.is(runPlugin(plugin, input), expected);
